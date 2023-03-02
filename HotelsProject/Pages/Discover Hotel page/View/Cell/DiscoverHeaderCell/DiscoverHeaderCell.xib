@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="202" id="KGk-i7-Jjw" customClass="DiscoverHeaderCell" customModule="HotelsProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="356" height="202"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="356" height="202"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discover your" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9S-oH-rh4">
+                        <rect key="frame" x="16" y="50" width="141" height="27.333333333333329"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="perfect place to stay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffv-NH-4wT">
+                        <rect key="frame" x="16" y="85.333333333333329" width="209" height="29"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search hotel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y9F-t1-7Bo">
+                        <rect key="frame" x="16" y="134.33333333333334" width="324" height="54"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="54" id="qfb-JB-SNo"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ffv-NH-4wT" firstAttribute="top" secondItem="z9S-oH-rh4" secondAttribute="bottom" constant="8" symbolic="YES" id="0ES-ic-lZt"/>
+                    <constraint firstItem="Y9F-t1-7Bo" firstAttribute="top" secondItem="ffv-NH-4wT" secondAttribute="bottom" constant="20" id="27l-5S-CPR"/>
+                    <constraint firstItem="z9S-oH-rh4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="5VX-fe-fQ7"/>
+                    <constraint firstItem="z9S-oH-rh4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="50" id="DJc-IN-Qvk"/>
+                    <constraint firstItem="ffv-NH-4wT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="TNs-yR-JI5"/>
+                    <constraint firstAttribute="trailing" secondItem="Y9F-t1-7Bo" secondAttribute="trailing" constant="16" id="kvf-WG-Pmz"/>
+                    <constraint firstItem="Y9F-t1-7Bo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="lVt-Zw-vW8"/>
+                    <constraint firstAttribute="bottom" secondItem="Y9F-t1-7Bo" secondAttribute="bottom" constant="13.67" id="lh5-nq-gBL"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="searchBar" destination="Y9F-t1-7Bo" id="Jie-1F-mPe"/>
+                <outlet property="subtitleLabel" destination="ffv-NH-4wT" id="s8i-F1-xuD"/>
+                <outlet property="titleLabel" destination="z9S-oH-rh4" id="Ob1-PC-xEa"/>
+            </connections>
+            <point key="canvasLocation" x="158.46153846153845" y="44.7867298578199"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
