@@ -11,6 +11,8 @@ class TopHotelTableCell: UITableViewCell {
 
     static let identifier = "TopHotelTableCell"
     
+    var dataTopHotel: [HotelModel] = []
+    
     private var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -58,12 +60,12 @@ class TopHotelTableCell: UITableViewCell {
 extension TopHotelTableCell: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return dataTopHotel.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TopHotelCollectionViewCell.identifier, for: indexPath) as? TopHotelCollectionViewCell else { return UICollectionViewCell() }
-        
+        cell.configure(model: dataTopHotel[indexPath.row])
         cell.setupCell()
 
         return cell

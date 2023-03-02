@@ -25,7 +25,8 @@ class DiscoverHeaderCell: UITableViewCell {
     func setupCell() {
         subtitleLabel.font = UIFont.systemFont(ofSize: 24, weight: .bold)
         
-        searchBar.layer.cornerRadius = 50
+        searchBar.layer.cornerRadius = 15
+        searchBar.clipsToBounds = true
         
     }
     

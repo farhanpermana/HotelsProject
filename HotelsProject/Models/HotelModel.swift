@@ -15,4 +15,5 @@ struct HotelModel {
     let price: Int
     let rating: Float
     let desc: String
+    let room: [Room]
 }

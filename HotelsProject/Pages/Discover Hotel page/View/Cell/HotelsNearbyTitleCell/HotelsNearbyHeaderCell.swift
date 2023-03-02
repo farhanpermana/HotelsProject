@@ -7,9 +7,18 @@
 
 import UIKit
 
+protocol HotelsNearbyDelegate {
+    func moveToHotelsNearbyPage()
+}
+
+
 class HotelsNearbyHeaderCell: UITableViewCell {
 
     static let identifier = "HotelsNearbyHeaderCell"
+    
+    var hotelData: [HotelModel] = []
+    
+    var delegate: HotelsNearbyDelegate?
     
     @IBOutlet weak var headerTitle: UILabel!
     @IBOutlet weak var showAllButton: UIButton!
@@ -24,6 +33,13 @@ class HotelsNearbyHeaderCell: UITableViewCell {
         headerTitle.font = UIFont.systemFont(ofSize: 24, weight: .bold)
         showAllButton.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .light)
         
+        
+    }
+    
+
+    @IBAction func tapShowAllButton(_ sender: Any) {
+        print("button clicked")
+        self.delegate?.moveToHotelsNearbyPage()
         
     }
     
