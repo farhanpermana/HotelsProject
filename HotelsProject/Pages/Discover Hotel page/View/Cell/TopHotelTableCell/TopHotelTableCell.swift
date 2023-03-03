@@ -39,7 +39,7 @@ class TopHotelTableCell: UITableViewCell {
     func setupTableCell() {
         contentView.addSubview(collectionView)
         collectionViewSetup()
-        
+        collectionView.backgroundColor = UIColor.clear
         collectionView.delegate = self
         collectionView.dataSource = self
     }

@@ -19,6 +19,7 @@ class RoomListTableViewCell: UITableViewCell {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.register(UINib(nibName: "RoomListCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: RoomListCollectionViewCell.identifier)
         
+        
         return collectionView
     }()
 
@@ -40,7 +41,7 @@ class RoomListTableViewCell: UITableViewCell {
     func setupTableCell() {
         contentView.addSubview(collectionView)
         collectionViewSetup()
-        
+        collectionView.backgroundColor = UIColor.clear
         collectionView.delegate = self
         collectionView.dataSource = self
     }
