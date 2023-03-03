@@ -8,7 +8,7 @@
 import Foundation
 
 struct Room {
-    var roomImg: String
-    var roomTitle: String
-    var roomDesc: String
+    let roomImg: String
+    let roomTitle: String
+    let roomDesc: String
 }
