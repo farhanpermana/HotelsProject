@@ -54,7 +54,7 @@ class DiscoverHotelController: UIViewController, HotelsNearbyDelegate {
         
     }
     
-    func moveToHotelDetailPage(model: [HotelModel]) {
+    func moveToHotelDetailPage(model: HotelModel) {
         let vc = HotelDetailController()
         vc.hotelDetail = model
         self.navigationController?.pushViewController(vc, animated: true)
@@ -142,7 +142,7 @@ extension DiscoverHotelController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if indexPath.section == 3 {
-            moveToHotelDetailPage(model: hotelData)
+            moveToHotelDetailPage(model: hotelData[indexPath.row])
         }
     
     }

@@ -49,7 +49,7 @@ class RoomListTableViewCell: UITableViewCell {
 
 extension RoomListTableViewCell: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return dataRoom.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -58,6 +58,8 @@ extension RoomListTableViewCell: UICollectionViewDataSource, UICollectionViewDel
         }
         
         cell.setupCell()
+        cell.configure(model: dataRoom[indexPath.row])
+        
         return cell
     }
     

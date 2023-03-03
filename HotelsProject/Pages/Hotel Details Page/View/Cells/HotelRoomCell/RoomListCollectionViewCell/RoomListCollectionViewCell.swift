@@ -31,9 +31,11 @@ class RoomListCollectionViewCell: UICollectionViewCell {
         self.contentView.layer.masksToBounds = true
     }
     
-    func configure(model: [Room]) {
-//        roomImage.image = UIImage(named: model.roomImg)
-//        titleRoom.text = model.room
+    func configure(model: Room) {
+        roomImage.image = UIImage(named: model.roomImg)
+        titleRoom.text = model.roomTitle
+        descRoom.text = model.roomDesc
+        
     }
 
 }
